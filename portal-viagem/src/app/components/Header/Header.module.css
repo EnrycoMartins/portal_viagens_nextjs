@@ -1,0 +1,35 @@
+.header {
+    background-color: #1f1f1f;
+    padding: 1rem 2rem;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo a {
+  /* Gradiente com o Vermelho e Azul oficiais da bandeira */
+  background: linear-gradient(to bottom, #CD2E3A 50%, #0047A0 50%);
+  
+  /* Aplica o fundo apenas ao texto */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  
+  /* Mantendo suas propriedades originais */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.header__nav a {
+    color: #ccc;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.header__nav a:hover {
+    color: #e50914;
+}

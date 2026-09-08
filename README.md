@@ -8,7 +8,6 @@ O Portal de Viagens KR permite que o usuário:
 
 - Veja uma apresentação inicial do portal na página `/`
 - Acesse a listagem de destinos disponíveis na página `/destinos`
-- Visualize detalhes de cada destino em uma página individual, através de rotas dinâmicas
 
 ## 🚀 Tecnologias utilizadas
 
@@ -16,7 +15,6 @@ O Portal de Viagens KR permite que o usuário:
 - [React](https://react.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 - CSS Modules
-- [next/image](https://nextjs.org/docs/app/api-reference/components/image) para otimização de imagens
 
 ## 📁 Estrutura de pastas
 
@@ -30,14 +28,12 @@ src/
 │   │   ├── Header/        → Cabeçalho com menu de navegação (next/link)
 │   │   └── Title/         → Componente de título reutilizável
 │   ├── destinos/
-│   │   ├── page.tsx       → Listagem de destinos (/destinos)
-│   │   └── [id]/
-│   │       └── page.tsx   → Página de detalhes de um destino (/destinos/[id])
+│   │   └── page.tsx       → Listagem de destinos (/destinos)
 │   ├── layout.tsx         → Layout raiz (Header + Footer envolvendo as páginas)
 │   ├── page.tsx           → Página inicial (/)
 │   └── page.module.css
 ├── lib/
-│   └── destino.ts         → Dados mockados dos destinos
+│   └── destino.js         → Dados mockados dos destinos
 ├── styles/
 │   └── globals.css
 └── types/
@@ -50,7 +46,6 @@ src/
 |----------------------|--------------------------------------------------------|
 | `/`                  | Apresentação do portal e link para a listagem          |
 | `/destinos`          | Listagem de destinos turísticos (mínimo de 4)           |
-| `/destinos/[id]`     | Página individual com detalhes de um destino específico |
 
 ## ▶️ Como rodar o projeto localmente
 
@@ -69,18 +64,6 @@ npm run dev
 ```
 
 Depois é só acessar [http://localhost:3000](http://localhost:3000) no navegador.
-
-## ✅ Requisitos atendidos
-
-- [x] Projeto iniciado com `create-next-app`
-- [x] Estrutura organizada (componentes, páginas e estilos separados)
-- [x] Página inicial com apresentação e link para destinos
-- [x] Página `/destinos` com listagem (mínimo 4 destinos)
-- [x] Componente `Card` exibindo nome e imagem do destino
-- [x] Componente `Layout` (Header + Footer) reutilizável em todas as páginas
-- [x] Estilização com CSS Modules
-- [x] Menu de navegação com `next/link`
-- [x] Rotas dinâmicas para páginas individuais de destino
 
 ## 👤 Autor
 

@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🇰🇷 Portal de Viagens KR
 
-## Getting Started
+Aplicação desenvolvida em Next.js que simula um pequeno portal de viagens focado em destinos turísticos da Coreia do Sul. O projeto foi criado como atividade de curso, com o objetivo de aplicar os conceitos de rotas baseadas em arquivos, rotas dinâmicas, componentização e estilização com CSS Modules.
 
-First, run the development server:
+## 📋 Sobre o projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+O Portal de Viagens KR permite que o usuário:
+
+- Veja uma apresentação inicial do portal na página `/`
+- Acesse a listagem de destinos disponíveis na página `/destinos`
+- Visualize detalhes de cada destino em uma página individual, através de rotas dinâmicas
+
+## 🚀 Tecnologias utilizadas
+
+- [Next.js](https://nextjs.org/) (App Router)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- CSS Modules
+- [next/image](https://nextjs.org/docs/app/api-reference/components/image) para otimização de imagens
+
+## 📁 Estrutura de pastas
+
+```
+src/
+├── app/
+│   ├── components/
+│   │   ├── Card/          → Card de destino (imagem, nome, descrição, preço)
+│   │   ├── Footer/        → Rodapé, presente em todas as páginas
+│   │   ├── Grid/          → Grid responsivo que organiza os Cards
+│   │   ├── Header/        → Cabeçalho com menu de navegação (next/link)
+│   │   └── Title/         → Componente de título reutilizável
+│   ├── destinos/
+│   │   ├── page.tsx       → Listagem de destinos (/destinos)
+│   │   └── [id]/
+│   │       └── page.tsx   → Página de detalhes de um destino (/destinos/[id])
+│   ├── layout.tsx         → Layout raiz (Header + Footer envolvendo as páginas)
+│   ├── page.tsx           → Página inicial (/)
+│   └── page.module.css
+├── lib/
+│   └── destino.ts         → Dados mockados dos destinos
+├── styles/
+│   └── globals.css
+└── types/
+    └── types.ts           → Tipagem (interface Viagem)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🗺️ Páginas e rotas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Rota                | Descrição                                             |
+|----------------------|--------------------------------------------------------|
+| `/`                  | Apresentação do portal e link para a listagem          |
+| `/destinos`          | Listagem de destinos turísticos (mínimo de 4)           |
+| `/destinos/[id]`     | Página individual com detalhes de um destino específico |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ▶️ Como rodar o projeto localmente
 
-## Learn More
+```bash
+# clonar o repositório
+git clone <url-do-repositorio>
 
-To learn more about Next.js, take a look at the following resources:
+# entrar na pasta do projeto
+cd portal-viagem
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# instalar as dependências
+npm install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# rodar o servidor de desenvolvimento
+npm run dev
+```
 
-## Deploy on Vercel
+Depois é só acessar [http://localhost:3000](http://localhost:3000) no navegador.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ✅ Requisitos atendidos
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [x] Projeto iniciado com `create-next-app`
+- [x] Estrutura organizada (componentes, páginas e estilos separados)
+- [x] Página inicial com apresentação e link para destinos
+- [x] Página `/destinos` com listagem (mínimo 4 destinos)
+- [x] Componente `Card` exibindo nome e imagem do destino
+- [x] Componente `Layout` (Header + Footer) reutilizável em todas as páginas
+- [x] Estilização com CSS Modules
+- [x] Menu de navegação com `next/link`
+- [x] Rotas dinâmicas para páginas individuais de destino
+
+## 👤 Autor
+
+Enryco Martins
